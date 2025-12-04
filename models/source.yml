@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: crypto_raw
+    schema: crypto_raw
+    tables:
+      - name: raw_realtime_crypto_trades
+      - name: raw_historic_crypto_ohlc
