@@ -1,6 +1,5 @@
 import logging
 import os
-
 import functions_framework
 from google.cloud import dataproc_v1
 
@@ -10,8 +9,7 @@ logger = logging.getLogger(__name__)
 PROJECT_ID = os.getenv("GCP_PROJECT", "crypto-480212")
 REGION = "us-central1"
 CLUSTER_NAME = "crypto-spark-cluster"
-MAIN_PY_URI = "gs://crypto-480212-crypto-scripts/gcs_to_bq_crypto.py"  # Spark job
-
+MAIN_PY_URI = "gs://crypto-480212-crypto-scripts/gcs_to_bq.py"
 
 @functions_framework.http
 def trigger_crypto_spark_job(request):

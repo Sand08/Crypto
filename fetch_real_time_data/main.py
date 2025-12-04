@@ -12,8 +12,13 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 PROJECT_ID = "crypto-480212"
-BUCKET_NAME = "crypto-480212-crypto-data"   # must exist
-GCS_PREFIX = "crypto_realtime"
+
+# ✅ NEW bucket
+BUCKET_NAME = "crypto-480212-crypto-rt-data"
+
+# ✅ Put files under crypto_realtime/incoming/
+GCS_PREFIX = "crypto_realtime/incoming"
+
 PRODUCTS = ["BTC-USD", "ETH-USD", "BNB-USD", "SOL-USD", "ADA-USD"]
 
 
